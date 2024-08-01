@@ -1,0 +1,19 @@
+@keyframes scroll-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+progress {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  transform-origin: 0 50%;
+  animation: scroll-progress auto linear;
+  animation-timeline: scroll();
+}

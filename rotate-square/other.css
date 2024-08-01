@@ -1,0 +1,62 @@
+:root {
+  --full: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 700px;
+  width: var(--full);
+  height: 100vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.square {
+  display: grid;
+  place-items: center;
+  color: #fff;
+}
+
+.square:before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  transform: translate(0px);
+  z-index: -2;
+  background: conic-gradient(
+    from 90deg at 40% -25%,
+    #ffd700,
+    #f79d03,
+    #ee6907,
+    #e6390a,
+    #de0d0d,
+    #d61039,
+    #12cf4b,
+    #15c727,
+    #12cfc2,
+    #1076d6,
+    #d0de0d,
+    #ee6907,
+    #f79d03,
+    #ffd700,
+    #ffd700,
+    #ffd700
+  );
+  filter: blur(40px);
+}

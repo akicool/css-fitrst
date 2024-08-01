@@ -1,0 +1,13 @@
+/* inline -> X, block -> Y */
+
+/* container у которого скорее всего есть скролл */
+.container {
+  scroll-timeline-name: --scroll-timeline-name-for-child; /* имя скролла, не CSS-переменная!! */
+  scroll-timeline-axis: inline; /* or block */
+}
+
+.child {
+  animation-timeline: --scroll-timeline-name-for-child; /* привязка к скроллу по inline направлению */
+}
+
+/* usage in Rotate Square */

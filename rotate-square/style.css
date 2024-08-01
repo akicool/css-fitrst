@@ -1,0 +1,40 @@
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  overflow-y: scroll;
+  scroll-timeline-name: --squareTimeline;
+  position: relative;
+}
+
+.square {
+  animation-name: rotateAnimation;
+  animation-duration: 1ms;
+  animation-direction: alternate;
+  animation-timeline: --squareTimeline;
+
+  background: linear-gradient(
+    90deg,
+    rgb(0, 255, 200) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  width: 100px;
+  height: 100px;
+  margin-top: 100px;
+
+  position: absolute;
+  bottom: 0;
+}
+
+.stretcher {
+  height: 1500px;
+  width: 100%;
+  border: 2px solid black;
+}

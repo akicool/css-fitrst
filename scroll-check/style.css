@@ -1,0 +1,15 @@
+@keyframes scroll-check {
+  from,
+  to {
+    --can-scroll: ;
+  }
+}
+
+.text-box {
+  animation: scroll-check linear;
+  animation-timeline: scroll(self);
+
+  --bg-is-scrolled: var(--can-scroll) lime;
+  --bg-is-not-scrolled: red;
+  box-shadow: -1px -8px 70px 0px var(--bg-is-scrolled, var(--bg-is-not-scrolled));
+}

@@ -1,0 +1,72 @@
+:root {
+  --full: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 700px;
+  width: var(--full);
+  height: 100vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+img {
+  width: 400px;
+}
+
+.images-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.lightbox {
+  display: none;
+
+  position: fixed;
+  z-index: 999;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.lightbox > div {
+  width: 600px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.lightbox:target {
+  display: grid;
+  place-items: center;
+}
+
+.min {
+  width: min(350px, 50%);
+  background: gold;
+}
+
+.max-width {
+  width: 50%;
+  max-width: 350px;
+  background: yellowgreen;
+}
